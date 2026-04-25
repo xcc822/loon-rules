@@ -1,0 +1,42 @@
+# 腾讯视频专项去广告（Minis 生成）
+# 说明：优先拦广告配置、开屏、贴片、上报与常见广告平台；如出现白屏或播放异常，再单独回退
+
+[Rule]
+# 腾讯/GDT/广告平台
+DOMAIN-SUFFIX,e.qq.com,REJECT
+DOMAIN-SUFFIX,gdt.qq.com,REJECT
+DOMAIN-SUFFIX,pgdt.gtimg.cn,REJECT
+DOMAIN-SUFFIX,adsmind.apdcdn.tc.qq.com,REJECT
+DOMAIN-SUFFIX,adfilter.imtt.qq.com,REJECT
+DOMAIN-SUFFIX,ad.tencentmusic.com,REJECT
+DOMAIN-SUFFIX,ad.qq.com,REJECT
+DOMAIN-SUFFIX,ad.weixin.qq.com,REJECT
+DOMAIN-SUFFIX,admob.com,REJECT
+DOMAIN-SUFFIX,doubleclick.net,REJECT
+DOMAIN-SUFFIX,googleads.g.doubleclick.net,REJECT
+DOMAIN-SUFFIX,pagead2.googlesyndication.com,REJECT
+DOMAIN-SUFFIX,securepubads.g.doubleclick.net,REJECT
+DOMAIN-SUFFIX,pangle.io,REJECT
+DOMAIN-SUFFIX,gromore.pangolin-sdk-toutiao.com,REJECT
+DOMAIN-SUFFIX,umeng.com,REJECT
+DOMAIN-SUFFIX,umengcloud.com,REJECT
+DOMAIN-SUFFIX,appsflyer.com,REJECT
+DOMAIN-SUFFIX,adjust.com,REJECT
+DOMAIN-SUFFIX,kochava.com,REJECT
+DOMAIN-SUFFIX,singular.net,REJECT
+DOMAIN-SUFFIX,tenjin.io,REJECT
+DOMAIN-KEYWORD,qad,REJECT
+DOMAIN-KEYWORD,gdt,REJECT
+DOMAIN-KEYWORD,pangolin,REJECT
+DOMAIN-KEYWORD,adsmind,REJECT
+DOMAIN-KEYWORD,adfilter,REJECT
+DOMAIN-KEYWORD,admob,REJECT
+DOMAIN-KEYWORD,appsflyer,REJECT
+DOMAIN-KEYWORD,umeng,REJECT
+DOMAIN-KEYWORD,tracking,REJECT
+DOMAIN-KEYWORD,analytics,REJECT
+
+[Rewrite]
+# 腾讯视频常见广告接口关键词（保守版）
+^https?:\/\/.*(qqlive|vqq|video\.qq|vv\.video\.qq)\/.*\b(splash|startup|launchad|adconfig|adinfo|ad_list|feedad|insertad|rewardvideo|commercial|vipad|adreport|adrequest)\b.* - reject
+^https?:\/\/.*\b(gdt|qad|pangolin|adsmind|adfilter|appsflyer|umeng)\b.* - reject
