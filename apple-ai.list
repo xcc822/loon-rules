@@ -14,3 +14,9 @@ DOMAIN,setup.icloud.com
 DOMAIN,bag.itunes.apple.com
 DOMAIN-KEYWORD,siri
 DOMAIN-SUFFIX,icloud-content.com
+DOMAIN-SUFFIX,apple-relay.akamaized.net
+DOMAIN-SUFFIX,apple-relay.apple.com
+DOMAIN-SUFFIX,apple-relay.cloudflare.com
+DOMAIN-SUFFIX,apple-relay.fastly-edge.com
+DOMAIN-SUFFIX,apple-relay.mask.apple-dns.net
+DOMAIN-SUFFIX,siri.apple.com
